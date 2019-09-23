@@ -1,18 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>View Transactions</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
-
+<div>
 <script>
 function listDonation(){
     
-var url="http://localhost:8080/CharityApp/ViewDonationResponseServlet";
+var url="http://localhost:8080/charityapp-api/ViewDonationResponseServlet";
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";
@@ -35,8 +25,6 @@ document.getElementById("tbody").innerHTML =  content;
 });
 }
 </script>
-</head>
-<body style="text-align:center">
 <jsp:include page="header2.jsp"></jsp:include>
 
 <h3>Donation Details</h3>
@@ -68,8 +56,6 @@ document.getElementById("tbody").innerHTML =  content;
 listDonation();
 </script>
 <br>
-<a href="adminFeatures.jsp">Home</a>&nbsp;&nbsp;&nbsp;
-<a href="sendRequest.jsp">New Fund Request</a>
-</body>
-</body>
-</html>
+<a href="?pageName=adminFeatures.jsp">Home</a>&nbsp;&nbsp;&nbsp;
+<a href="?pageName=sendRequest.jsp">New Fund Request</a>
+</div>

@@ -44,7 +44,7 @@ function addCategory(){
                 alert("Invalid Category");
             } else {
                 alert("Your category added successfully");
-                window.location.href = "viewCategory.jsp";
+                window.location.href = "?pageName=viewCategory.jsp";
             }
             
     });

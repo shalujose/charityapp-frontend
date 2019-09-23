@@ -1,30 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-   
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-<link rel="stylesheet" href="css/bootsrap.min.css">
-<script type="js/bootstrap.min.js"></script>
-<style>
-.btn-primary {
-    color: #fff;
-    background-color: #0275d8;
-    border-color: #0275d8;
-    display: inline-block;
-    padding: 3px 30px;
-  font-size: 18px;
-  margin: 2px 2px;
-  cursor: pointer;
-    </style>
-
-<script src="js/jquery-3.4.1.min.js"></script>
-</head>
-<body style="text-align:center">
-<jsp:include page="header.jsp"></jsp:include>
-<br><br><br>
+<div>
 <h2>Please sign in</h2>
 <br>
 
@@ -36,7 +10,7 @@
 <input type = "submit" value = "Sign in" class="btn-primary"/>
 
 </form>
-<br><a href="register.jsp">New User?</a>
+<br><a href="?pageName=register.jsp">New User?</a>
 <script>
         function login() {
             //alert('register');
@@ -46,7 +20,7 @@
             var formData = "email=" + email + "&password=" + password;
             console.log(formData);
             //alert(formData);
-            var url = "http://localhost:8080/CharityApp/LoginServlet?" + formData;
+            var url = "http://localhost:8080/charityapp-api/LoginServlet?" + formData;
             console.log(url);
             
             var formData = {};
@@ -61,11 +35,9 @@
                     alert("Invalid Username/Password");
                 } else {
                     alert("Successfully loged in");
-                    window.location.href = "donorFeatures.jsp";
+                    window.location.href = "?pageName=donorFeatures.jsp";
                 }
             });
         }
     </script>
-</body>
-
-</html>
+</div>

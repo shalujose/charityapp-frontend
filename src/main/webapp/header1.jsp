@@ -20,22 +20,16 @@ body {background-color: #F5F5DC;}
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="adminFeatures.jsp">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="?pageName=donorFeatures.jsp">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sendRequest.jsp">Send Fund Request</a>
+          <a class="nav-link" href="?pageName=viewRequest.jsp">View Fund Request</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="addCategory.jsp">Add Category</a>
+          <a class="nav-link" href="?pageName=sendDonation.jsp">Donate Now</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="viewTransaction.jsp">View Donations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="closeRequest.jsp">Close Request</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="index.jsp">Logout</a>
+         <li class="nav-item">
+          <a class="nav-link" href="?pageName=index.jsp">Logout</a>
         </li>      
       </ul>
     </div>

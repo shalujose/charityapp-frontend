@@ -1,12 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Admin Login</title>
-<link rel="stylesheet" href="css/bootsrap.min.css">
-<script type="js/bootstrap.min.js"></script>
+
 <style>
 .btn-primary {
     color: #fff;
@@ -19,8 +11,7 @@
   cursor: pointer;
     
     </style>
-<script src="js/jquery-3.4.1.min.js"></script>
-</head>
+
 <body style="text-align:center">
 <jsp:include page="header.jsp"></jsp:include>
 <br><br><br>
@@ -45,7 +36,7 @@
             var formData = "name=" + name + "&password=" + password;
             console.log(formData);
             //alert(formData);
-            var url = "http://localhost:8080/CharityApp/AdminLoginServlet?" + formData;
+            var url = "http://localhost:8080/charityapp-api/AdminLoginServlet?" + formData;
             console.log(url);
             //alert(url);
             var formData = {};
@@ -59,10 +50,9 @@
                     alert("Invalid Username/Password");
                 } else {
                     //alert("valid Username/Password");
-                    window.location.href = "adminFeatures.jsp";
+                    window.location.href = "?pageName=adminFeatures.jsp";
                 }
             });
         }
     </script>
-</body>
-</html>
+
