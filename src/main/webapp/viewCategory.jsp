@@ -2,7 +2,7 @@
 <script>
 function listcategory(){
     
-var url="http://localhost:8080/CharityApp/ViewCategoryServlet";
+var url="http://localhost:8080/charityapp-api/ViewCategoryServlet";
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";

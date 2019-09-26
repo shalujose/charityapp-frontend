@@ -29,7 +29,7 @@ body {background-color: #F5F5DC;}
           <a class="nav-link" href="?pageName=sendDonation.jsp">Donate Now</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="?pageName=index.jsp">Logout</a>
+          <a class="nav-link" href="?pageName=home.jsp">Logout</a>
         </li>      
       </ul>
     </div>

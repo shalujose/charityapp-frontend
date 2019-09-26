@@ -31,11 +31,11 @@ body {background-color: #F5F5DC;}
         <li class="nav-item">
           <a class="nav-link" href="?pageName=viewTransaction.jsp">View Donations</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="?pageName=closeRequest.jsp">Close Request</a>
-        </li>
+        </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="?pageName=index.jsp">Logout</a>
+          <a class="nav-link" href="?pageName=home.jsp">Logout</a>
         </li>      
       </ul>
     </div>

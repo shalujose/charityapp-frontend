@@ -10,11 +10,11 @@ $.getJSON(url,function(response){
 for(let ld of list){
     console.log(list);
     content += "<tr>";
-    content += "<td>" + ld.transaction_id + "</td>";
-    content += "<td>" + ld.date_of_transaction + "</td>";
-    content += "<td>" + ld.fundrequest_id + "</td>";
-    content += "<td>" + ld.cate_id + "</td>";
-    content += "<td>" + ld.donor_id + "</td>";
+    content += "<td>" + ld.transactionId + "</td>";
+    content += "<td>" + ld.dateOfTransaction + "</td>";
+    content += "<td>" + ld.fundrequestId + "</td>";
+    content += "<td>" + ld.categoryId + "</td>";
+    content += "<td>" + ld.donorId + "</td>";
     content += "<td>" + ld.name + "</td>";
     content += "<td>" + ld.amount + "</td>";
     

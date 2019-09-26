@@ -1,14 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Send Donation Request</title>
-<link rel="stylesheet" href="css/bootsrap.min.css">
-<script type="js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
 
+<head>
 <style>
 .button {
   border: none;
@@ -35,7 +26,7 @@ function addRequest(){
     var amount = document.getElementById("amount").value;
     var formData = "category_Id=" + category_Id + "&amount="+ amount;
     console.log(formData);
-    var url="http://localhost:8080/CharityApp/DonateFundServlet?"+formData;
+    var url="http://localhost:8080/charityapp-api/AddDonationRequestServlet?"+formData;
     	console.log(url);
     var formData = {};
     $.get(url, function(response){
@@ -45,7 +36,7 @@ function addRequest(){
                 alert("Invalid request");
             } else {
                 alert("Your request successfully completed");
-                window.location.href = "adminFeatures.jsp";
+                window.location.href = "?pageName=viewRequest.jsp";
             }
             
     });
@@ -62,10 +53,10 @@ function addRequest(){
 <input type="number" min="50" max="15000" name="amount" id="amount" required />
 <br/>
 
-<button type="submit" class="button">Send</button>
+<button type="submit" class="button">Send</button>&nbsp;&nbsp;
+<button type="reset" class="button">Cancel</button>
 </form>
+<br>
+<br><a href="?pageName=adminFeatures.jsp">Home</a>
 <br/>
-
-
 </body>
-</html>

@@ -1,14 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Donate Now</title>
-<link rel="stylesheet" href="css/bootsrap.min.css">
-<script type="js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
 
+<head>
 <style>
 .button {
   border: none;
@@ -50,7 +41,7 @@ function sendResponse(){
                 alert("Transaction failed");
             } else {
                 alert("Your transaction successfully completed");
-                window.location.href = "donorFeatures.jsp";
+                window.location.href = "pageName=donorFeatures.jsp";
             }
             
     });
@@ -73,8 +64,8 @@ function sendResponse(){
 <label>Amount :&nbsp;&nbsp;</label>
 <input type="number" min="50" max="15000" name="amount" id="amount" required />
 <br/>
-
-<button type="submit" class="button">Donate</button>
+<br>
+<button type="submit" class="button">Donate</button>&nbsp;&nbsp;
+<button type="reset"  class="button">Cancel</button>
 </form>
 </body>
-</html>

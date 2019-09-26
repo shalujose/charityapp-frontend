@@ -1,18 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>View Transactions</title>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
 
+<head>
 <script>
 function listcategory(){
     
-var url="http://localhost:8080/CharityApp/CloseRequestServlet";
+var url="http://localhost:8080/charityapp-api/CloseRequestServlet";
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";
@@ -59,9 +50,7 @@ document.getElementById("tbody").innerHTML =  content;
 <script>
 listcategory();
 </script>
-
-<a href="adminFeatures.jsp">Home</a>&nbsp;&nbsp;&nbsp;
-<a href="addCategory.jsp">New Category</a>
+<br>
+<a href="?pageName=adminFeatures.jsp">Home</a>&nbsp;&nbsp;&nbsp;
+<a href="?pageName=addCategory.jsp">New Category</a>
 </body>
-</body>
-</html>

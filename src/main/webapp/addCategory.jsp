@@ -1,14 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
 
-<link rel="stylesheet" href="css/bootsrap.min.css">
-<script type="js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
+<head>
 <style>
 .button {
   border: none;
@@ -34,7 +25,7 @@ function addCategory(){
     var category_name  = document.getElementById("category_name").value;
     var formData = "category_name=" + category_name;
     console.log(formData);
-    var url="http://localhost:8080/CharityApp/AddCategoryServlet?"+formData;
+    var url="http://localhost:8080/charityapp-api/AddCategoryServlet?"+formData;
     	console.log(url);
     var formData = {};
     $.get(url, function(response){
@@ -61,4 +52,3 @@ function addCategory(){
 </form>
 <br/>
 </body>
-</html>
