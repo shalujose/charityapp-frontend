@@ -39,6 +39,6 @@ body {background-color: #F5F5DC;}
         </li>      
       </ul>
     </div>
+    </nav>
     </div>
-  </nav>
-</header>
+  
