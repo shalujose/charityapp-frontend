@@ -1,27 +1,26 @@
 <html>
 <head>
-
-<script src="js/jquery.min.js"></script>
+<link rel="stylesheet" href="css/regstyle.css">
 </head>
-<div>
+<div class="registration">
 <h2>Register Now</h2>
-
+<br>
 <form onsubmit="register()">
-<br><br>
 
-Name <input type="text" name="name" id="name" placeholder="Enter your name" required autofocus><br><br>
+<input type="text" name="name" id="name" placeholder="Enter your name" pattern="[A-Za-z]{1,32}" title="Name contains letters only" required autofocus><br><br>
 
-Gender <input type="radio" name="gender" value="M" id="gender" required>Male
-<input type="radio" name="gender" id="gender" value="F" required>Female <br><br>
+<input type="radio" name="gender" value="M" id="gender" required><span id="gender">&nbsp;Male</span>&nbsp;
+<input type="radio" name="gender" id="gender"  value="F" required><span id="gender">&nbsp;Female</span><br><br>
 
-Age <input type="number" min=18 max=80 name="age" id="age" required><br><br>
-Email <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required><br><br>
-Phone <input type="number" name="phone" id="phone" required><br><br>
-Password <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Please set your password" required><br><br>
+<input type="number" min=18 max=80 name="age" placeholder="Enter your age" id="age"  required><br><br>
+<input type="email" name="email" placeholder="Enter your email id" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter valid email id" required><br><br>
+<input type="number" name="phone" placeholder="Enter your phone number" id="phone" pattern="[789][0-9]{9}" title="Enter valid phone number" required><br><br>
+<input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Please set your password" required><br><br>
 <input type = "submit" value = "Submit" class="btn btn-success" />
 &nbsp;&nbsp;<input type = "reset" value = "Reset" class="btn btn-success" onclick="window.location.href ='?pageName=register.jsp';"/>
 
 </form>
+</div>
 <script type="text/javascript">
 
  function register()
@@ -52,5 +51,4 @@ Password <input type="password" name="password" id="password" pattern="(?=.*\d)(
     });
 } 
 </script>
-</div>
 </html>

@@ -1,10 +1,22 @@
-<body src="C:\Users\shalu jose\Downloads\charity">
-<div>
+<head>
+<link rel="stylesheet" type="text/css" href="css/home.css">
+</head>
 <br><br>
-<h2>Donate</h2>
-<h4>for a better world</h4>
-<a href="?pageName=register.jsp">Register Now</a><br><br>
-<a href="?pageName=login.jsp">Login Here</a><br><br>
-<a href="?pageName=about.jsp">About Us</a>
+<br><br>
+<body style="text-align:center">
+<div class="headerContainerWrapper"></div>
+<div class="bodyContainerWrapper">
+<div class="bodyContainer">
+<div class="padding">
+<br><br>
+<br>
+<br>
+<br>
+<a href="?pageName=register.jsp" class="transparent_btn">Register Now</a>
+<a href="?pageName=login.jsp" class="transparent_btn orange">Login Here</a>
+<a href="?pageName=about.jsp" class="transparent_btn blue">About Us</a>
 </div>
+</div>
+</div>
+<div class="footerContainerWraooer"></div>
 </body>

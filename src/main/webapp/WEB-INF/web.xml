@@ -104,4 +104,10 @@
   	<servlet-name>CloseRequestServlet</servlet-name>
   	<url-pattern>/CloseRequestServlet</url-pattern>
   </servlet-mapping>
+  
+  <error-page>
+        <error-code>404</error-code>
+        <location>/Error404.html</location>
+</error-page>
 </web-app>
+

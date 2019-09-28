@@ -1,0 +1,108 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	background:url(../images/log1.jpg) no-repeat center
+	fixed;
+	background-size:cover;
+}
+h1{
+	text-align:center;
+	color:white;
+	background:rgba(0,0,0,0.5);
+	padding:15px;
+}
+.registration{
+	margin:auto;
+	width: 40%;
+	height:50;
+	text-align: center;
+	color :white;
+	background: rgba(0,0,0,0.5);
+	border: 2px solid white;
+	padding: 15px;
+}
+#gender{
+	font-family:serif;
+	font-size:18px;
+}
+#age
+{
+    width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;
+}
+#email{
+width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;
+}
+#phone{
+width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;
+}
+#password{
+width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;
+}
+#name{
+	width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;
+}
+#number
+{
+    width:40%;
+	padding: 5px;
+	border-radius:5 px;
+	border:1px solid white;
+	outline:0;
+	font-family:serif;
+	font-size:18px;
+	background:none;	
+}
+.btn{
+	width:100px;
+	padding:5px;
+	font-family:serif;
+	font-size:18px;
+	border:1px solid white;
+	outline:0;
+	border-radius:5px;
+	background:none;
+	color:white;
+}
+.btn:hover{
+	background:#123456;
+}
+::placeholder{
+	color:white;
+}

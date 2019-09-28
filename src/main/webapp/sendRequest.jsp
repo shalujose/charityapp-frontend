@@ -36,7 +36,7 @@ function addRequest(){
                 alert("Invalid request");
             } else {
                 alert("Your request successfully completed");
-                window.location.href = "?pageName=viewRequest.jsp";
+                window.location.href = "?pageName=donorFeatures.jsp";
             }
             
     });
