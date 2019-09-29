@@ -13,7 +13,7 @@
 		
 		<div class="textbox">
     <i class="fas fa-lock"></i>
-		<br> <input type="password" name="password" id="password" placeholder="Password" required>
+		 <input type="password" name="password" id="password" placeholder="Password" required>
 		</div> 
 		<input type="submit" value="Sign in" class="btn" />
 

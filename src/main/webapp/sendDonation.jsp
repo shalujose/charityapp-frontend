@@ -15,10 +15,10 @@
 }
 </style>
 </head>
-<body style="text-align:center">
+<body background="images/cl1.jpg" style="text-align:center">
 
 <jsp:include page="header1.jsp"></jsp:include>
-<br><br><br><br>
+<br><br>
 <h2 style="color:Indigo">GIVE A BIT. CHANGE A LOT</h2>
 <br>
 

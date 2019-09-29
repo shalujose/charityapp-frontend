@@ -1,19 +1,5 @@
-
 <head>
-<style>
-.button {
-  border: none;
-  color: white;
-  padding: 10px 25px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  background-color: #008CBA;
-}
-</style>
+<link rel="stylesheet" href="css/sendrequest.css">
 </head>
 <body style="text-align:center">
 <jsp:include page="header2.jsp"></jsp:include>
@@ -36,27 +22,37 @@ function addRequest(){
                 alert("Invalid request");
             } else {
                 alert("Your request successfully completed");
-                window.location.href = "?pageName=donorFeatures.jsp";
+                window.location.href = "?pageName=adminFeatures.jsp";
             }
             
     });
   }
 </script>
-<br><br><br>
+<br><div  class="registration">
 <form onsubmit="addRequest()">
-
-<label>&nbsp;CategoryId: &nbsp;</label>
-<input type="number" min="1" max="10" name="category_Id" id="category_Id" required autofocus />
+<div>
+<label>&nbsp;Category Id &nbsp;</label>
+<input type="number" min="1" max="10" name="category_Id" id="category_Id" required autofocus /></div>
 <br/>
-
-<label>&nbsp;Amount :&nbsp;&nbsp;</label>
-<input type="number" min="50" max="15000" name="amount" id="amount" required />
+<div>
+<label>&nbsp;Amount(Rs) &nbsp;&nbsp;</label>
+<input type="number" min="50" max="15000" name="amount" id="amount"  required /></div>
 <br/>
+<div>
+<button type="submit" class="button">Proceed</button>&nbsp;&nbsp;
+<button type="reset" class="button">Clear</button>
+</div>
 
-<button type="submit" class="button">Send</button>&nbsp;&nbsp;
-<button type="reset" class="button">Cancel</button>
+<div class="headerContainerWrapper"></div>
+<div class="bodyContainerWrapper">
+<div class="bodyContainer">
+<div class="padding">
+<div align="right">
+<a href="?pageName=adminFeatures.jsp" class="transparent_btn">Back</a>
+</div>
+</div>
+</div>
+</div>
 </form>
-<br>
-<br><a href="?pageName=adminFeatures.jsp">Home</a>
-<br/>
+</div>
 </body>

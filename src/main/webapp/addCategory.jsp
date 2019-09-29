@@ -15,9 +15,9 @@
 }
 </style>
 </head>
-<body style="text-align:center">
+<body background="images/cl1.jpg" style="text-align:center">
 <jsp:include page="header2.jsp"></jsp:include>
-
+<br>
 <h3> Add Donation Categories</h3>
 <script>
 function addCategory(){
@@ -41,7 +41,7 @@ function addCategory(){
     });
   }
 </script>
-<br><br><br><br><br><br>
+<br><br>
 <form onsubmit="addCategory()">
 
 <label><b>Category Type: &nbsp;</b></label>
