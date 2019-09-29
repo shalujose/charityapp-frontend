@@ -1,32 +1,24 @@
+<head>
+   <link rel="stylesheet" type="text/css" href="css/adminLogin.css"> 
+</head>
+<body>
+<div class="login-box">
+	<h2>Admin sign in</h2>
 
-<style>
-.btn-primary {
-    color: #fff;
-    background-color: #0275d8;
-    border-color: #0275d8;
-    display: inline-block;
-    padding: 3px 30px;
-  font-size: 18px;
-  margin: 2px 2px;
-  cursor: pointer;
-    
-    </style>
+	<form onsubmit="adminLogin()">
+	<div class="textbox">
+    <i class="fas fa-user"></i>
+		<input type="text" name="name" id="name" placeholder="Enter user name" required autofocus>
+		</div>
+		
+		<div class="textbox">
+    <i class="fas fa-lock"></i>
+		<br> <input type="password" name="password" id="password" placeholder="Password" required>
+		</div> 
+		<input type="submit" value="Sign in" class="btn" />
 
-<body style="text-align:center">
-<jsp:include page="header.jsp"></jsp:include>
-<br><br><br>
-<h2>Admin sign in</h2>
-<br>
-
-<form onsubmit="adminLogin()">
-
-<input type="text" name="name" id="name" placeholder="Enter user name" required><br><br>
-<input type="password" name="password" id="password" placeholder="Password" required><br>
-<br>
-<input type = "submit" value = "Sign in" class="btn-primary"/>
-
-</form>
-
+	</form>
+	</div>
 <script>
         function adminLogin() {
             //alert('register');
@@ -55,4 +47,5 @@
             });
         }
     </script>
+ </body>
 

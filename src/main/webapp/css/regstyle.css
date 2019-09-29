@@ -29,17 +29,19 @@ h1{
 }
 #age
 {
-    width:40%;
+    width:50%;
 	padding: 5px;
+	color:white;
 	border-radius:5 px;
 	border:1px solid white;
 	outline:0;
 	font-family:serif;
 	font-size:18px;
 	background:none;
+	color:white;
 }
 #email{
-width:40%;
+width:50%;
 	padding: 5px;
 	border-radius:5 px;
 	border:1px solid white;
@@ -47,9 +49,10 @@ width:40%;
 	font-family:serif;
 	font-size:18px;
 	background:none;
+	color:white;
 }
 #phone{
-width:40%;
+width:50%;
 	padding: 5px;
 	border-radius:5 px;
 	border:1px solid white;
@@ -57,9 +60,10 @@ width:40%;
 	font-family:serif;
 	font-size:18px;
 	background:none;
+	color:white;
 }
 #password{
-width:40%;
+width:50%;
 	padding: 5px;
 	border-radius:5 px;
 	border:1px solid white;
@@ -67,9 +71,10 @@ width:40%;
 	font-family:serif;
 	font-size:18px;
 	background:none;
+	color:white;
 }
 #name{
-	width:40%;
+	width:50%;
 	padding: 5px;
 	border-radius:5 px;
 	border:1px solid white;
@@ -77,17 +82,19 @@ width:40%;
 	font-family:serif;
 	font-size:18px;
 	background:none;
+	color:white;
 }
 #number
 {
-    width:40%;
+    width:50%;
 	padding: 5px;
 	border-radius:5 px;
 	border:1px solid white;
 	outline:0;
 	font-family:serif;
 	font-size:18px;
-	background:none;	
+	background:none;
+	color:white;	
 }
 .btn{
 	width:100px;
@@ -98,11 +105,17 @@ width:40%;
 	outline:0;
 	border-radius:5px;
 	background:none;
-	color:white;
 }
 .btn:hover{
 	background:#123456;
 }
 ::placeholder{
 	color:white;
+}
+textarea:focus, input:focus {
+    color: #ff0000;
+}
+
+input, select, textarea{
+    color: #000;
 }

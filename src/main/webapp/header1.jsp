@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src = "js/bootstrap.min.js"></script>
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <style>
 body {background-color: #F5F5DC;}
 </style>
@@ -13,7 +13,7 @@ body {background-color: #F5F5DC;}
 <div class="container">
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" style="background-color:#050942">
-    <a class="navbar-brand" href="#">TheCharity</a>
+    <a class="navbar-brand" href="#">Charity</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,7 +29,7 @@ body {background-color: #F5F5DC;}
           <a class="nav-link" href="?pageName=sendDonation.jsp">Donate Now</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="?pageName=home.jsp">Logout</a>
+          <a class="nav-link" href="?pageName=logout.jsp">Logout</a>
         </li>      
       </ul>
     </div>

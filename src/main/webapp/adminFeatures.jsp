@@ -1,5 +1,5 @@
 
-
+<jsp:include page="header2.jsp"></jsp:include>
 <br><br><br><br>
 <h3>Admin Home</h3>
 <a href="?pageName=sendRequest.jsp">Send Fund Request</a><br><br>

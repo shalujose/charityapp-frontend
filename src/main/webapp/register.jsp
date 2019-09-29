@@ -12,10 +12,14 @@
 <input type="radio" name="gender" value="M" id="gender" required><span id="gender">&nbsp;Male</span>&nbsp;
 <input type="radio" name="gender" id="gender"  value="F" required><span id="gender">&nbsp;Female</span><br><br>
 
-<input type="number" min=18 max=80 name="age" placeholder="Enter your age" id="age"  required><br><br>
-<input type="email" name="email" placeholder="Enter your email id" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter valid email id" required><br><br>
-<input type="number" name="phone" placeholder="Enter your phone number" id="phone" pattern="[789][0-9]{9}" title="Enter valid phone number" required><br><br>
-<input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="Please set your password" required><br><br>
+<input type="number" min=18 max=80 name="age" placeholder="Enter age" id="age"  required><br><br>
+
+<input type="email" name="email" placeholder="Enter email id" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter valid email id" required><br><br>
+
+<input type="number" name="phone" placeholder="Enter phone number" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please enter exactly 10 digits" required><br><br>
+
+<input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="set your password" required><br><br>
+
 <input type = "submit" value = "Submit" class="btn btn-success" />
 &nbsp;&nbsp;<input type = "reset" value = "Reset" class="btn btn-success" onclick="window.location.href ='?pageName=register.jsp';"/>
 

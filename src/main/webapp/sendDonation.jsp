@@ -66,6 +66,6 @@ function sendResponse(){
 <br/>
 <br>
 <button type="submit" class="button">Donate</button>&nbsp;&nbsp;
-<button type="reset"  class="button">Cancel</button>
+<button type="reset"  class="button">Clear</button>
 </form>
 </body>
