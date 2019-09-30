@@ -25,7 +25,7 @@ document.getElementById("tbody").innerHTML =  content;
 </head>
 <body style="text-align:center">
 <jsp:include page="header2.jsp"></jsp:include>
-<br><br><br>
+<br><br>
 <h5>Donation Details</h5>
 
 <form onsubmit = "listcategory()"> </form> 
@@ -50,7 +50,12 @@ document.getElementById("tbody").innerHTML =  content;
 <script>
 listcategory();
 </script>
-<br>
+<div><br><br>
+<label><b>Enter the Request Id You want to close</b></label>
+<input type="number" name="requestId" >
+<input type="button" value="Close Request">
+</div>
+<br><br>
 <a href="?pageName=adminFeatures.jsp">Home</a>&nbsp;&nbsp;&nbsp;
 <a href="?pageName=addCategory.jsp">New Category</a>
 </body>
