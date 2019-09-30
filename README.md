@@ -1,13 +1,13 @@
 # **charityapp-frontend**
 
-###**[1] Donor**
+** - Donor**
   1. Registration
   2. Login
   3. View Fund Request
   4. Donate Fund
   5. Logout
   
-###[2] **Admin**
+ ** - Admin**
   1. Login
   2. Send Fund Request
   3. View Donations
