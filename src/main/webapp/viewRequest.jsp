@@ -1,4 +1,9 @@
-  
+<style>
+    thead,th,tr{
+    border: 1px solid orange;
+     padding: 5px;
+    }
+</style>
 <div>
 <script>
 function listDonation(){
@@ -16,7 +21,7 @@ for(let ld of list){
     content += "<td>" + ld.category_name + "</td>";
     content += "<td>" + ld.dateOfRequest + "</td>";
     content += "<td>" + ld.amount + "</td>";
-    content += "<td>" + ld.status + "</td>";
+    
     content += "</tr>";
 }
 console.log(content);
@@ -27,7 +32,6 @@ document.getElementById("tbody").innerHTML =  content;
 
 <jsp:include page="header1.jsp"></jsp:include>
 
-<h3>GIVE A BIT. CHANGE A LOT</h3>
 <br>
 <form onsubmit = "listDonation()"> </form> 
 <div class="container-fluid">
@@ -42,7 +46,7 @@ document.getElementById("tbody").innerHTML =  content;
                        <th>CategoryName</th>
                        <th>Date-Of-Request</th>
                        <th>Amount</th>
-                       <th>Status</th>
+                       
                    </tr>
                </thead>
                <tbody id="tbody">

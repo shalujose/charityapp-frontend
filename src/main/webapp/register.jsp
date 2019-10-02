@@ -16,7 +16,7 @@
 
 <input type="email" name="email" placeholder="Enter email id" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Enter valid email id" required><br><br>
 
-<input type="number" name="phone" placeholder="Enter phone number" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Please enter exactly 10 digits" required><br><br>
+<input type="number" name="phone" placeholder="Enter phone number" id="phone" pattern="[0-9]{1,10}" title="Please enter exactly 10 digits" required><br><br>
 
 <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" placeholder="set your password" required><br><br>
 

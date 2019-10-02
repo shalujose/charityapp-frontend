@@ -13,7 +13,6 @@ for(let ld of list){
     content += "<td>" + ld.transactionId + "</td>";
     content += "<td>" + ld.dateOfTransaction + "</td>";
     content += "<td>" + ld.fundrequestId + "</td>";
-    content += "<td>" + ld.categoryId + "</td>";
     content += "<td>" + ld.donorId + "</td>";
     content += "<td>" + ld.name + "</td>";
     content += "<td>" + ld.amount + "</td>";
@@ -40,7 +39,6 @@ document.getElementById("tbody").innerHTML =  content;
                        <th>TransactionId</th>
                        <th>Date-of-transaction</th>
                        <th>FundRequestId</th>
-                       <th>CategoryId</th>
                        <th>DonorId</th>
                        <th>Donor-Name</th>
                        <th>Amount</th>

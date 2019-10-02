@@ -29,9 +29,18 @@ body {background-color: #F5F5DC;}
           <a class="nav-link" href="?pageName=sendDonation.jsp">Donate Now</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link" href="?pageName=logout.jsp">Logout</a>
+          <a class="nav-link" href="" onclick="logout()">Logout</a>
         </li>      
       </ul>
     </div>
      </nav>
     </div>
+    <script>
+    function logout()
+    {
+        event.preventDefault();
+        localStorage.clear();
+        window.location.href="?pageName=home.jsp";
+    }
+    </script>
+</body>

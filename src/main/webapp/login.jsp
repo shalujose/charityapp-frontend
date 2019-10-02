@@ -41,7 +41,7 @@
 				if (msg.errorMessage != null) {
 					alert("Invalid Username/Password");
 				} else {
-					alert("Successfully logged in");
+					//alert("Successfully logged in");
 					window.location.href = "?pageName=donorFeatures.jsp";
 				}
 			});
