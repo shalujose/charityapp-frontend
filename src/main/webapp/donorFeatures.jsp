@@ -3,7 +3,6 @@
 </head>
 <jsp:include page="header1.jsp"></jsp:include>
 <div id="name"></div>
-<div id="id"></div>
 <br>
 <br>
 <h2 style="color: purple">
@@ -13,11 +12,8 @@
 	function displayName() {
 		var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
 		var name = user.name;
-		var id = user.id;
 		document.getElementById("name").innerHTML = "Welcome ....." + name;
-		document.getElementById("id").innerHTML = "Your Id ......." + id;
 		return name;
-		return id;
 	}
 
 	displayName();
@@ -28,7 +24,7 @@
 		localStorage.clear();
 		window.location.href = "?pageName=home.jsp";
 	}
-	logout();
+	
 </script>
 <div class="wrapper">
 

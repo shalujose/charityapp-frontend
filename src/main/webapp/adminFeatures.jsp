@@ -14,7 +14,7 @@ function logout(){
     localStorage.clear();
     window.location.href="?pageName=home.jsp";
 }
-logout();
+
 
 </script>
 <h3>Admin Home</h3><br>

@@ -10,10 +10,29 @@
 <br>
 
 <script>
+function listDonationRequests(){
+    
+	var url="http://localhost:8080/charityapp-api/ViewRequestServlet";
+	$.getJSON(url,function(response){
+	    var list = response;
+	     document.getElementById("fundrequest_id").innerHTML="";
+	    var content=" ";
+		for(let ld of list){
+		    console.log(list);
+		    content += "<option value=" + ld.requestId + " style='background-color: Black'>" +ld.category_id +"-" + ld.category_name +"( Rs."+ ld.amount +")" + "</option>";
+		}
+	console.log(content);
+	document.getElementById("fundrequest_id").innerHTML =  content;
+	});
+	}
+	
 function sendResponse(){
     event.preventDefault();
     var fundrequest_id  = document.getElementById("fundrequest_id").value;
-    var donor_id  = document.getElementById("donor_id").value;
+
+    var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+	var donor_id = user.id;
+   // var donor_id  = document.getElementById("donor_id").value;
     var amount = document.getElementById("amount").value;
     var formData = "fundrequest_id=" + fundrequest_id + "&donor_id="+ donor_id +"&amount="+ amount;
     console.log(formData);
@@ -27,7 +46,7 @@ function sendResponse(){
                 alert("Transaction failed");
             } else {
                 alert("Your transaction successfully completed");
-                window.location.href = "pageName=donorFeatures.jsp";
+                window.location.href = "?pageName=donorFeatures.jsp";
             }
             
     });
@@ -37,24 +56,10 @@ function sendResponse(){
 <form onsubmit="sendResponse()">
 <div>
 <br>
-<label>RequestId</label>
+<label>Request&nbsp;</label>
 <select name="fundrequest_id" id="fundrequest_id">
-	<option value="1">1<option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
-	<option value="5">5</option>
-	<option value="6">6</option>
 </select>
-<!-- <label>RequestId &nbsp;</label>
-<input type="number" min="1" name="fundrequest_id" id="fundrequest_id" required autofocus /> -->
 </div> 
-<br>
-
-<div>
-<label>DonorId &nbsp;</label>
-<input type="number" min="1" max="10" name="donor_id" id="donor_id" required/>
-</div>
 <br>
 
 <div>
@@ -79,4 +84,7 @@ function sendResponse(){
 
 </form>
 </div>
+<script>
+listDonationRequests();
+</script>
 </body>

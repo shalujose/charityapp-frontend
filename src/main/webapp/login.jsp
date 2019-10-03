@@ -26,8 +26,7 @@
 			var password = document.getElementById("password").value;
 			var formData = "email=" + email + "&password=" + password;
 			console.log(formData);
-			var url = "http://localhost:8080/charityapp-api/LoginServlet?"
-					+ formData;
+			var url = "http://localhost:8080/charityapp-api/LoginServlet?" + formData;
 			console.log(url);
 
 			var formData = {};
