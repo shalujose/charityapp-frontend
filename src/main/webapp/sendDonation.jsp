@@ -19,7 +19,7 @@ function listDonationRequests(){
 	    var content=" ";
 		for(let ld of list){
 		    console.log(list);
-		    content += "<option value=" + ld.requestId + " style='background-color: Black'>" +ld.category_id +"-" + ld.category_name +"( Rs."+ ld.amount +")" + "</option>";
+		    content += "<option value=" + ld.requestId + " style='background-color: black'>" +ld.requestId +"-" + ld.category_name +"( Rs."+ ld.amount +")" + "</option>";
 		}
 	console.log(content);
 	document.getElementById("fundrequest_id").innerHTML =  content;
