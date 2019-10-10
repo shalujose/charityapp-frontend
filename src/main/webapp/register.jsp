@@ -38,9 +38,10 @@
 	var password=document.getElementById("password").value;
 	
 	var formData = "name=" +name + "&gender=" +gender+ "&age=" +age+ "&email=" +email+ "&phone="+ phone +"&password="+ password;
-	var url = "http://localhost:8080/charityapp-api/RegisterServlet?"+ formData;
+	//var url = "http://localhost:8080/charityapp-api/RegisterServlet?"+ formData;
+	var url="http://localhost:9000/register?"+formData;
     console.log(url);
-    $.get(url, function(response){
+    $.post(url, function(response){
     console.log(response);
     var data= JSON.parse(response);
     if ( data.errorMessage != null) {

@@ -27,12 +27,11 @@
             var password = document.getElementById("password").value;
             var formData = "name=" + name + "&password=" + password;
             console.log(formData);
-            //alert(formData);
-            var url = "http://localhost:8080/charityapp-api/AdminLoginServlet?" + formData;
+            //var url = "http://localhost:8080/charityapp-api/AdminLoginServlet?" + formData;
+            var url="http://localhost:9000/adminLogin?"+formData;
             console.log(url);
-            //alert(url);
             var formData = {};
-            $.get(url, function(response) {
+            $.post(url, function(response) {
                 console.log(response);
                 console.log(response.errorMessage);
                 var msg=JSON.parse(response);

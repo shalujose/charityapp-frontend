@@ -25,10 +25,11 @@ function addCategory(){
     var category_name  = document.getElementById("category_name").value;
     var formData = "category_name=" + category_name;
     console.log(formData);
-    var url="http://localhost:8080/charityapp-api/AddCategoryServlet?"+formData;
+    //var url="http://localhost:8080/charityapp-api/AddCategoryServlet?"+formData;
+    var url="http://localhost:9000/addCategory?"+formData;
     	console.log(url);
     var formData = {};
-    $.get(url, function(response){
+    $.post(url, function(response){
             console.log(response);
             var msg = JSON.parse(response);
             if (msg.errorMessage!=null) {

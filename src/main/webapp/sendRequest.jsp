@@ -27,12 +27,13 @@ function addRequest(){
     event.preventDefault();
     var category_Id  = document.getElementById("category_Id").value;
     var amount = document.getElementById("amount").value;
-    var formData = "category_Id=" + category_Id + "&amount="+ amount;
+    var formData = "categoryId=" + category_Id + "&amount="+ amount;
     console.log(formData);
-    var url="http://localhost:8080/charityapp-api/AddDonationRequestServlet?"+formData;
+    //var url="http://localhost:8080/charityapp-api/AddDonationRequestServlet?"+formData;
+    var url="http://localhost:9000/sendRequest?"+formData;
     	console.log(url);
     var formData = {};
-    $.get(url, function(response){
+    $.post(url, function(response){
             console.log(response);
             var msg = JSON.parse(response);
             if (msg.errorMessage!=null) {

@@ -26,11 +26,12 @@
 			var password = document.getElementById("password").value;
 			var formData = "email=" + email + "&password=" + password;
 			console.log(formData);
-			var url = "http://localhost:8080/charityapp-api/LoginServlet?" + formData;
+			//var url = "http://localhost:8080/charityapp-api/LoginServlet?" + formData;
+			var url="http://localhost:9000/login?"+formData;
 			console.log(url);
 
 			var formData = {};
-			$.get(url, function(response) {
+			$.post(url, function(response) {
 				console.log(response);
 				console.log(response.errorMessage);
 				localStorage.setItem("LOGGED_IN_USER",response);

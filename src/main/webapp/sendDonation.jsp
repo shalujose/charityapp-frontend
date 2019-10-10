@@ -34,12 +34,13 @@ function sendResponse(){
 	var donor_id = user.id;
    // var donor_id  = document.getElementById("donor_id").value;
     var amount = document.getElementById("amount").value;
-    var formData = "fundrequest_id=" + fundrequest_id + "&donor_id="+ donor_id +"&amount="+ amount;
+    var formData = "fundrequestId=" + fundrequest_id + "&donorId="+ donor_id +"&amount="+ amount;
     console.log(formData);
-    var url="http://localhost:8080/charityapp-api/DonateFundServlet?"+formData;
+    //var url="http://localhost:8080/charityapp-api/DonateFundServlet?"+formData;
+    var url="http://localhost:9000/donateFund?"+formData;
     	console.log(url);
     var formData = {};
-    $.get(url, function(response){
+    $.post(url, function(response){
             console.log(response);
             var msg = JSON.parse(response);
             if (msg.errorMessage!=null) {

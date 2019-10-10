@@ -3,7 +3,8 @@
 <script>
 function listcategory(){
     
-var url="http://localhost:8080/charityapp-api/CloseRequestServlet";
+//var url="http://localhost:8080/charityapp-api/CloseRequestServlet";
+var url="http://localhost:9000/closeRequest?"+formData;
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";
