@@ -4,7 +4,7 @@
 function listcategory(){
     
 //var url="http://localhost:8080/charityapp-api/CloseRequestServlet";
-var url="http://localhost:9000/closeRequest?"+formData;
+var url="http://localhost:9000/closeRequest?";
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";
