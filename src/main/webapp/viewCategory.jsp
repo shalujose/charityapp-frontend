@@ -3,7 +3,7 @@
 function listcategory(){
     
 //var url="http://localhost:8080/charityapp-api/ViewCategoryServlet";
-var url="http://localhost:9000/viewCategory?";
+var url="http://localhost:9000/viewCategory";
 $.getJSON(url,function(response){
     var list = response;
      document.getElementById("tbody").innerHTML="";
@@ -11,8 +11,8 @@ $.getJSON(url,function(response){
 for(let ld of list){
     console.log(list);
     content += "<tr>";
-    content += "<td>" + ld.category_id + "</td>";
-    content += "<td>" + ld.category_name + "</td>";
+    content += "<td>" + ld.categoryId + "</td>";
+    content += "<td>" + ld.categoryName + "</td>";
     
     content += "</tr>";
 }

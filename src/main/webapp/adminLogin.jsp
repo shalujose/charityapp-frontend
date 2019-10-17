@@ -31,20 +31,24 @@
             var url="http://localhost:9000/adminLogin?"+formData;
             console.log(url);
             var formData = {};
-            $.post(url, function(response) {
-                console.log(response);
-                console.log(response.errorMessage);
-                var msg=JSON.parse(response);
-                //alert(msg);
-                
-                if (msg.errorMessage!=null) {
-                    alert("Invalid Username/Password");
-                } else {
-                    //alert("valid Username/Password");
+            $.post(url).then(function(response) {
+                var data = response;
+                console.log(data);
+                        if (data != null) {
+                            localStorage.setItem("UserId",data);
+                    alert("You've successfully signed into Charity");
                     window.location.href = "?pageName=adminFeatures.jsp";
                 }
+            },
+            function(response) {
+                var data =response;
+                console.log(data);
+                if (data.responseText!= null) {
+                    alert(data.responseText);
+                    window.location.href = "?pageName=adminLogin.jsp";
+                }
             });
-        }
+         }
     </script>
  </body>
 

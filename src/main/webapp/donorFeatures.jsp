@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="css/donor.css">
 </head>
 <jsp:include page="header1.jsp"></jsp:include>
-<div id="name"></div>
+<div style="text-align:center-left; color:white" id="name"></div>
 <br>
 <br>
 <h2 style="color: purple">
@@ -10,7 +10,8 @@
 </h2>
 <script>
 	function displayName() {
-		var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+		 var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
+        console.log(user);
 		var name = user.name;
 		document.getElementById("name").innerHTML = "Welcome ....." + name;
 		return name;

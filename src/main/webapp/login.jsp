@@ -33,21 +33,25 @@
 				console.log(url);
 
 				var formData = {};
-				$.post(url, function(response) {
-					console.log(response);
-					console.log(response.errorMessage);
-					localStorage.setItem("LOGGED_IN_USER", response);
-					var msg = JSON.parse(response);
-					//alert(msg);
-
-					if (msg.errorMessage != null) {
-						alert("Invalid Username/Password");
-					} else {
-						alert("Successfully logged in");
-						window.location.href = "?pageName=donorFeatures.jsp";
-					}
-				});
-			}
+				$.post(url).then(function(response){
+			        console.log(response);
+			        localStorage.setItem("LOGGED_IN_USER",JSON.stringify(response));
+			        var data=response;
+			        console.log(response.name)
+			            if(data.errorMessage== null){
+			                alert("Login successfully");
+			                window.location.href= "?pageName=donorFeatures.jsp";
+				       }
+				   },
+				   function(response) {
+				       var data =response;
+				       console.log(data);
+				       if (data.responseText!= null) {
+				           alert(data.responseText);
+				           window.location.href = "?pageName=login.jsp";
+				       }
+				   });
+				}
 		</script>
 
 	</div>

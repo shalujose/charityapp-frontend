@@ -41,19 +41,28 @@
 	//var url = "http://localhost:8080/charityapp-api/RegisterServlet?"+ formData;
 	var url="http://localhost:9000/register?"+formData;
     console.log(url);
-    $.post(url, function(response){
-    console.log(response);
-    var data= JSON.parse(response);
-    if ( data.errorMessage != null) {
-    	alert(data.errorMessage);
-    }
-    else
-    	{
-    	alert("successfully registered");
-    	window.location.href= "?pageName=login.jsp";
-    	}
-       
+    $.post(url).then ( function(response) {
+        console.log("success");
+        console.log(response);
+        var msg=response;
+      if(msg!=null) {
+            alert(" Registered Successfully");
+            window.location.href = "?pageName=login.jsp";
+     }
+    },
+    function(response) {
+        console.log("error");
+        console.log(response);
+        var msg=response;
+      console.log(msg);
+       if (msg.errorMessage!=null) {
+            alert("registration failed!!!")
+   
+        } else if(msg!=null) {
+            alert(" Registered Successfully");
+          //  window.location.href = "?pageName=adminlogin.jsp";
+     }
     });
-} 
+    }
 </script>
 </html>

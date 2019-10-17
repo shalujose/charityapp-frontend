@@ -23,30 +23,41 @@
 function addCategory(){
     event.preventDefault();
     var category_name  = document.getElementById("category_name").value;
-    var formData = "categoryName=" + category_name;
+    var formData = "category_name=" + category_name;
     console.log(formData);
     //var url="http://localhost:8080/charityapp-api/AddCategoryServlet?"+formData;
     var url="http://localhost:9000/addCategory?"+formData;
     	console.log(url);
     var formData = {};
-    $.post(url, function(response){
-            console.log(response);
-            var msg = JSON.parse(response);
-            if (msg.errorMessage!=null) {
-                alert("Invalid Category");
-            } else {
-                alert("Your category added successfully");
-                window.location.href = "?pageName=viewCategory.jsp";
-            }
-            
+    $.post(url).then ( function(response) {
+        console.log("success");
+        console.log(response);
+        var msg=response;
+      if(msg!=null) {
+            alert(" Category Added Successfully");
+            window.location.href = "?pageName=viewCategory.jsp";
+     }
+    },
+    function(response) {
+        console.log("error");
+        console.log(response);
+        var msg=response;
+      console.log(msg);
+       if (msg.errorMessage!=null) {
+            alert("Invalid Category!!!")
+   
+        } else if(msg!=null) {
+            alert("Category Added Successfully");
+            window.location.href = "?pageName=viewCategory.jsp";
+     }
     });
-  }
+    }
 </script>
 <br><br>
 <form onsubmit="addCategory()">
 
 <label><b>Category Type: &nbsp;</b></label>
-<input type="text" name="category_name" id="category_name" required autofocus />
+<input type="text" name="category_name" id="category_name" pattern="[A-Za-z]{1,32}" title="Category Name contains letters only" required autofocus />
 
 
 &nbsp;&nbsp;&nbsp;<button type="submit" class="button">Add Category</button>

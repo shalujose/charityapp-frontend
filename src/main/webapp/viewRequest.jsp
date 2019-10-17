@@ -18,8 +18,8 @@ for(let ld of list){
     console.log(list);
     content += "<tr>";
     content += "<td>" + ld.requestId + "</td>";
-    content += "<td>" + ld.category_id + "</td>";
-    content += "<td>" + ld.category_name + "</td>";
+    content += "<td>" + ld.categoryId + "</td>";
+    content += "<td>" + ld.categoryName + "</td>";
     content += "<td>" + ld.dateOfRequest + "</td>";
     content += "<td>" + ld.amount + "</td>";
     
