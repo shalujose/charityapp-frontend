@@ -12,14 +12,15 @@
 <script>
 function listDonationRequests(){
     
-	var url="http://localhost:8080/charityapp-api/ViewRequestServlet";
+	//var url="http://localhost:8080/charityapp-api/ViewRequestServlet";
+	var url="http://localhost:9000/viewRequest";
 	$.getJSON(url,function(response){
 	    var list = response;
 	     document.getElementById("fundrequest_id").innerHTML="";
 	    var content=" ";
 		for(let ld of list){
 		    console.log(list);
-		    content += "<option value=" + ld.requestId + " style='background-color: black'>" +ld.requestId +"-" + ld.category_name +"( Rs."+ ld.amount +")" + "</option>";
+		    content += "<option value=" + ld.requestId + " style='background-color: black'>" +ld.requestId +"-" + ld.categoryName +"( Rs."+ ld.amount +")" + "</option>";
 		}
 	console.log(content);
 	document.getElementById("fundrequest_id").innerHTML =  content;
@@ -40,18 +41,29 @@ function sendResponse(){
     var url="http://localhost:9000/donateFund?"+formData;
     	console.log(url);
     var formData = {};
-    $.post(url, function(response){
-            console.log(response);
-            var msg = JSON.parse(response);
-            if (msg.errorMessage!=null) {
-                alert("Transaction failed");
-            } else {
-                alert("Your transaction successfully completed");
-                window.location.href = "?pageName=donorFeatures.jsp";
-            }
-            
+    $.post(url).then ( function(response) {
+        console.log("success");
+        console.log(response);
+        var msg=response;
+      if(msg!=null) {
+            alert(" Your transaction Successfully completed");
+            window.location.href = "?pageName=donorFeatures.jsp";
+     }
+    },
+    function(response) {
+        console.log("error");
+        console.log(response);
+        var msg=response;
+      console.log(msg);
+       if (msg.errorMessage!=null) {
+            alert("Transaction failed!!!")
+   
+        } else if(msg!=null) {
+            alert("Category Added Successfully");
+            window.location.href = "?pageName=sendDonation.jsp";
+     }
     });
-  }
+    }
 </script>
 <div class="registration">
 <form onsubmit="sendResponse()">
