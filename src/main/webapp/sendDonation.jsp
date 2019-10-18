@@ -33,7 +33,6 @@ function sendResponse(){
 
     var user = JSON.parse(localStorage.getItem("LOGGED_IN_USER"));
 	var donor_id = user.id;
-   // var donor_id  = document.getElementById("donor_id").value;
     var amount = document.getElementById("amount").value;
     var formData = "fundrequestId=" + fundrequest_id + "&donorId="+ donor_id +"&amount="+ amount;
     console.log(formData);
