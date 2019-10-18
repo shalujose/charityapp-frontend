@@ -15,7 +15,7 @@ for(let ld of list){
     content += "<td>" + ld.dateOfTransaction + "</td>";
     content += "<td>" + ld.fundrequestId + "</td>";
     content += "<td>" + ld.donorId + "</td>";
-    content += "<td>" + ld.name + "</td>";
+    content += "<td>" + ld.donorName + "</td>";
     content += "<td>" + ld.amount + "</td>";
     
     content += "</tr>";
