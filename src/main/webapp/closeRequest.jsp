@@ -95,8 +95,8 @@ function closeRequest(){
     	var formData = {};
     $.post(url).then ( function(response) { 
         console.log("success");
-        console.log(response);
         var msg=response;
+        console.log(response);
       if(msg!=null) {
             alert(" Request Closed!!!");
             window.location.href = "?pageName=adminFeatures.jsp";
